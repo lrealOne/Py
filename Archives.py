@@ -1,3 +1,5 @@
+import os;
+
 """
 Criando arquivos com python
 
@@ -37,6 +39,6 @@ archive = "AulaTeste.txt"
 
 # os modules
 
-# os.remove/os.unlink(archive) => exclui o arquivo;
+os.remove(archive) # ou os.unlink => exclui o arquivo;
 # os.rename(archive, "novoNome") => altera o nome do arquivo.
 
