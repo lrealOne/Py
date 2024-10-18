@@ -28,34 +28,48 @@ def desfazer(lista, deletados):
 
 lista = []
 deletados = []
-while on:
-    opcoes = [1, 2, 3, 4]
-    try:
-        escolha = int(input("Selecione uma opção:\n 1. Ver lista\n 2. Adicionar item\n 3. Excluir item\n 4. Desfazer\n"))
-    except:
-        print("Selecione uma opção disponivel")
-
-    if escolha in opcoes:
-        if escolha == 1:
-            if len(lista) == 0:
-                print("Lista não possui itens")
-            else:
-                print(lista)
-        elif escolha == 2:
-            item = input("Adicionar:  ")
-            lista.append(item)
-            print(lista)
-
-        elif(escolha == 3):
-            if len(lista) > 1:
-                print(f"Item removido: {lista[-1]}")
-                deletados.append(lista[-1])
-                lista.pop()
-                print(f"lista atual: {lista}")
-            else:
-                print("A lista não possui itens")
+while len(lista) <= 10:
+    if len(lista) >= 11:
+        print("Você não pode mais adicionar itens")
     else:
-        print("Selecione uma opção disponivel")
+        opcoes = [1, 2, 3, 4]
+        try:
+            escolha = int(input("Selecione uma opção:\n 1. Ver lista\n 2. Adicionar item\n 3. Excluir item\n 4. Desfazer\n"))
+        except:
+            print("Selecione uma opção disponivel")
+
+        if escolha in opcoes:
+            if escolha == 1:
+                if len(lista) == 0:
+                    print("Lista não possui itens")
+                else:
+                    print(lista)
+            elif escolha == 2:
+                item = input("Adicionar:  ")
+                if item in lista:
+                    print("item ja esta na lista")
+                else:
+                    lista.append(item)
+                    print(lista)
+
+            elif(escolha == 3):
+                if len(lista) > 1:
+                    print(f"Item removido: {lista[-1]}")
+                    deletados.append(lista[-1])
+                    lista.pop()
+                    print(f"lista atual: {lista}")
+                else:
+                    print("A lista não possui itens")
+            
+            else:
+                if len(deletados) < 1:
+                    print("Não há itens para recuperar")
+                else:
+                    print(f"Desfeita exclusão item: {deletados[-1]}")
+                    lista.append(deletados[-1])
+                    print(lista)
+        else:
+            print("Selecione uma opção disponivel")
     
     
     
