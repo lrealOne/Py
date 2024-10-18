@@ -25,9 +25,18 @@ Modulo JSON:
     json.load
 """
 
-loc_archive = r"C:\Users\luanl\Documents\Estudos"
-loc_archive += "AulaTeste.txt"
+archive = "AulaTeste.txt"
 
-with open(loc_archive, "w") as archive:
-    print("Hello world")
-    print("closening")
+
+# with open(archive, "w+", encoding="utf-8") as archive:
+#     archive.write("Atenção")
+#     print(archive.read());
+
+
+################################
+
+# os modules
+
+# os.remove/os.unlink(archive) => exclui o arquivo;
+# os.rename(archive, "novoNome") => altera o nome do arquivo.
+
