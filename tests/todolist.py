@@ -12,6 +12,25 @@ desfazer = [] -> refazer ["caminhar", "fazer café"]
 refazer = todo ["fazer café"]
 refazer = todo ["fazer café", "caminhar"]
 """
+
+def getData(lista, url):
+    dados = []
+    try:
+        with open(url, "r", encoding="utf8") as arquivo:
+            dados = json.load(arquivo)
+    except:
+        print("Não foi possivel carregar o arquivo")
+        setData(lista)
+    return dados;
+
+def setData(lista, url):
+    dados = lista
+    with open(url, "w", encoding="utf8") as arquivo:
+        dados = json.dump(lista, arquivo, indent=2, ensure_ascii=False)
+    return dados
+
+
+
 def adicionarItem(item, lista):
     lista.append(item)
     return lista;
