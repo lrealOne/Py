@@ -1,3 +1,6 @@
+import json
+import os
+
 """
 Exercicio 
 
@@ -71,7 +74,6 @@ def desfazer(lista, deletados):
 #     def adicionarItem(item, lista):
 #     lista.append(item)
 #     return lista;
-import os
 
 def listar(lista):
     print(*lista, sep="\n");
@@ -133,4 +135,9 @@ Forma mais eficaz de montar os comandos evitando o uso de if & else
  comandos()
 }
 '''
+    
+# Salvando em JSON 
+
+with open ("todo.json", "w+", encoding="utf8") as files:
+    json.dump(lista, files)
     
