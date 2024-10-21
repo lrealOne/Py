@@ -119,5 +119,18 @@ while len(lista) < 11:
                 os.system('cls')
                 listar(lista)
             
-    
+'''
+Forma mais eficaz de montar os comandos evitando o uso de if & else
+
+ comandos = {
+        'listar': lambda: listar(tarefas),
+        'desfazer': lambda: desfazer(tarefas, tarefas_refazer),
+        'refazer': lambda: refazer(tarefas, tarefas_refazer),
+        'clear': lambda: os.system('clear'),
+        'adicionar': lambda: adicionar(tarefa, tarefas),
+    }
+
+ comandos()
+}
+'''
     
