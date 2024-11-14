@@ -10,7 +10,8 @@ class Person:
 person01 = Person("Luan", 21)
 person02 = Person("Ana", 20)
 person03 = Person("Caio", 1)
-bd = [person01.__dict__, person02.__dict__, person03.__dict__] # ou vars(person)
+bd = [person01.__dict__, person02.__dict__, person03.__dict__] 
+# ou vars(person)
 
 def dump():
     with open (pasta, "w") as archive:
