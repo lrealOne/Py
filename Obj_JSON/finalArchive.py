@@ -1,12 +1,12 @@
 import json
 
-from test import pasta, Person
+from test import pasta, Person, dump
 
 with open (pasta, "r") as archive:
-    persons = json.load(archive)
-    p1 = Person(**persons[0])
-    p2 = Person(**persons[1])
-    p3 = Person(**persons[2])
+    data = json.load(archive)
+    p1 = Person(**data[0])
+    p2 = Person(**data[1])
+    p3 = Person(**data[2])
 
-print(persons)
+print(data)
 print(p1.name, "\n", p2.name, "\n", p3.name)
