@@ -1,0 +1,10 @@
+Error: Anything, LogFileMixin
+Success: Awesome, LogFileMixin
+Error: Anything, LogFileMixin
+Success: Awesome, LogFileMixin
+Error: Anything, LogFileMixin
+Success: Awesome, LogFileMixin
+Error: Anything, LogFileMixin
+Success: Awesome, LogFileMixin
+Success: Iphone está ligado., Smartphone
+Error: Samsung está desligado., Smartphone
